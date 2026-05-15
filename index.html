@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Password Strength Checker</h1>
+            <p class="subtitle">Check the strength of your password in real-time</p>
+            
+            <div class="input-group">
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password" placeholder="Type your password here..." autocomplete="off">
+                <button id="togglePassword" class="toggle-btn" title="Show/Hide password">👁️</button>
+            </div>
+            
+            <div class="strength-meter">
+                <div class="strength-bar" id="strengthBar"></div>
+            </div>
+            
+            <div class="strength-text">
+                <span id="strengthLabel">Enter a password</span>
+            </div>
+            
+            <div class="requirements">
+                <h3>Password Requirements:</h3>
+                <ul>
+                    <li id="req-length"><span class="icon">○</span> At least 8 characters</li>
+                    <li id="req-uppercase"><span class="icon">○</span> Contains uppercase letter (A-Z)</li>
+                    <li id="req-lowercase"><span class="icon">○</span> Contains lowercase letter (a-z)</li>
+                    <li id="req-number"><span class="icon">○</span> Contains number (0-9)</li>
+                    <li id="req-special"><span class="icon">○</span> Contains special character (!@#$%^&*)</li>
+                </ul>
+            </div>
+            
+            <div class="feedback" id="feedback"></div>
+            
+            <div class="stats">
+                <p><strong>Password Length:</strong> <span id="length">0</span> characters</p>
+                <p><strong>Time to crack:</strong> <span id="crackTime">-</span></p>
+            </div>
+            
+            <button id="generateBtn" class="generate-btn">Generate Strong Password</button>
+            <button id="copyBtn" class="copy-btn" style="display: none;">Copy Password</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
